@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Habit Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1>Daily Habit Tracker</h1>
+                <p>Stay consistent, build streaks, achieve your goals.</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="add-habit-section">
+                <form id="addHabitForm" class="add-habit-form">
+                    <div class="input-group">
+                        <input type="text" id="habitNameInput" placeholder="What habit do you want to build?" required autocomplete="off">
+                        <button type="submit" class="btn-primary" id="addBtn">
+                            <i class="fas fa-plus"></i> Add Habit
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="habits-section">
+                <div class="section-header">
+                    <h2>Your Habits</h2>
+                    <span id="dateDisplay" class="date-display"></span>
+                </div>
+                
+                <div id="habitsList" class="habits-grid">
+                    <!-- Habit cards will be injected here by JS -->
+                </div>
+                
+                <div id="emptyState" class="empty-state hidden">
+                    <div class="empty-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>No habits yet</h3>
+                    <p>Add your first habit above to start tracking!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
